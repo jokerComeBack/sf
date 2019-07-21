@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{320:function(t,e,s){"use strict";s.r(e);var n={name:"features"},r=s(16),o=Object(r.a)(n,function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[[e("h1",[this._v("实现功能")])]],2)},[],!1,null,"214e765c",null);e.default=o.exports}}]);
