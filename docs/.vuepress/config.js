@@ -1,4 +1,13 @@
+const path = require('path');
 module.exports = {
+  base:'/sf/',
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@img': path.resolve(__dirname, './imgs'),
+      }
+    }
+  },
   title: 'Hello SF',
   description: 'Just playing around',
   head: [
@@ -10,10 +19,6 @@ module.exports = {
       { text: '产品结构', link: '/structure/' },
       {
         text: '代码框架', link: '/framework/'
-        // items: [
-        //   { text: '总览', link: '/framework/' },
-        //   { text: '脑图', link: '/mind/' },
-        // ]
       },
       { text: '实现功能', link: '/features/' },
       { text: '技术难点', link: '/technology/' },
@@ -29,9 +34,6 @@ module.exports = {
       ['/set/', 'Set模块'],
       ['/setchannel/', 'SetChannel模块'],
       ['/setmsglimit/', 'SetMsgLimit模块']
-      // '/',
-      // '/page-a',
-      // ['/page-b', 'Explicit link text']
     ]
     }
   // }

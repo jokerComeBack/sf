@@ -3,9 +3,9 @@
     <h1>产品结构</h1>
     <div></div>
     <ul>
-        <li>登录模块</li>
+        <li>登录</li>
         <li>
-            <div>创建计划模块</div>
+            <div>创建计划</div>
             <ol>
                 <li>定时单次</li>
                 <li>定时重复</li>

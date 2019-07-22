@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div v-for="item in ImgList" @click="showBigImg(item)">
+        <div v-for="item in ImgList" @click="showBigImg(item)" class="img-list">
+            <span>{{item.name}}</span>
             <img :src="item.src" alt="">
         </div>
         <div class="mask" v-if="showMask">
@@ -16,17 +17,16 @@
     data() {
       return {
         ImgList: [
-          { src: require('./imgs/editor1.png') },
-          { src: require('./imgs/editor2.png') },
-          { src: require('./imgs/editor3.png') },
-          { src: require('./imgs/editor4.png') },
-          { src: require('./imgs/editor5.png') },
-          { src: require('./imgs/editor6.png') },
-          { src: require('./imgs/editor7.png') },
-          { src: require('./imgs/editor8.png') },
-          { src: require('./imgs/editor9.png') }
-
-        ],
+                  {name:'Editor', src: require('./imgs/editor1.png') },
+                  {name:'Editor/Steps', src: require('./imgs/editor2.png') },
+                  {name:'Editor/Content', src: require('./imgs/editor3.png') },
+                  {name:'Content/BaseCrowd', src: require('./imgs/editor4.png') },
+                  {name:'Content/TriggerCrowd', src: require('./imgs/editor5.png') },
+                  {name:'TriggerCrowd/Timer', src: require('./imgs/editor6.png') },
+                  {name:'Reach', src: require('./imgs/editor7.png') },
+                  {name:'Reach/ParamSetting', src: require('./imgs/editor8.png') },
+                  {name:'Goal', src: require('./imgs/editor9.png') }
+                ],
         bigImg: null,
         showMask: false
       }
@@ -41,30 +41,5 @@
 </script>
 
 <style>
-    img{
-        width: 750px;
-    }
-    .big-image{
-        width: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .mask{
-        position: fixed;
-        left:0;
-        top:0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-    i{
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        font-size: 20px;
-        font-style: normal;
-        color: #fff;
-    }
+    @import "../.vuepress/css/index.css";
 </style>

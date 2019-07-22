@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div v-for="item in ImgList" @click="showBigImg(item)">
+        <div v-for="item in ImgList" @click="showBigImg(item)" class="img-list">
+            <span>{{item.name}}</span>
             <img :src="item.src" alt="">
         </div>
         <div class="mask" v-if="showMask">
@@ -16,11 +17,9 @@
     data() {
       return {
         ImgList: [
-          { src: require('./imgs/report1.png') },
-          { src: require('./imgs/report2.png') },
-          { src: require('./imgs/report3.png') }
-
-
+          {name:'Report审批前', src: require('./imgs/report1.png') },
+                    {name:'审批后分析', src: require('./imgs/report2.png') },
+                    {name:'审批后详情', src: require('./imgs/report3.png') }
         ],
         bigImg: null,
         showMask: false
@@ -36,30 +35,5 @@
 </script>
 
 <style>
-    img{
-        width: 750px;
-    }
-    .big-image{
-        width: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .mask{
-        position: fixed;
-        left:0;
-        top:0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-    i{
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        font-size: 20px;
-        font-style: normal;
-        color: #fff;
-    }
+    @import "../.vuepress/css/index.css";
 </style>

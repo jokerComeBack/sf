@@ -37,43 +37,7 @@
 </script>
 
 <style>
-img{
-    display: block;
-    width: 750px;
-}
-.img-list{
-    padding-top: 40px;
-    text-align:center;
-}
-.img-list span{
-    font-size: 24px;
-}
-.big-image{
-    width: 80%;
-    position: absolute;
-    z-index: 110;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.mask{
-    position: fixed;
-    z-index: 100;
-    left:0;
-    top:0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-.box{
-    
-}
-i{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 20px;
-    font-style: normal;
-    color: #fff;
-}
+    @import "../.vuepress/css/index.css";
+
+
 </style>
